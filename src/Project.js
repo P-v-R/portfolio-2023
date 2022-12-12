@@ -14,7 +14,7 @@ export default function Project({ project, key }) {
       </div>
       <div className="m-auto">
         <a
-          className="card-body border-2 border-black my-auto bg-lightGray mr-4 mx-auto py-2 px-6 transition-colors duration-300 ease-in-out hover:bg-yellow"
+          className="hover:cursor-none test card-body border-2 border-black my-auto bg-lightGray mr-4 mx-auto py-2 px-6 transition-colors duration-300 ease-in-out hover:bg-yellow"
           href={link}
         >
           Visit

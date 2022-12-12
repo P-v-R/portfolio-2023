@@ -8,6 +8,9 @@ module.exports = {
         lightGray: "#F2F2F2",
         yellow: "#FFD301",
       },
+      backgroundImage: {
+        dots: "url('/src/assets/dots.png')",
+      },
     },
   },
   plugins: [],
