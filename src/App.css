@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  background-color: #fef1e5;
 }
 
+body {
+  background-color: #fef1e5;
+  cursor: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +41,13 @@
     transform: rotate(360deg);
   }
 }
+
+.card-body:hover {
+  box-shadow: -10px 10px 0px -2px black;
+  transform: translate(5px, -1px);
+  transition: all 0.2s ease-in-out;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
