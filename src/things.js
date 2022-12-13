@@ -1,7 +1,7 @@
 export const experiences = [
   {
     title: "Township",
-    role: "L2 software engineer",
+    role: "L2 Software Engineer",
     desc: "here is the description of what I did at township, keep it short and simple",
     when: "2020 - Present",
     link: "https://www.township.agency/",
@@ -62,9 +62,9 @@ export const projects = [
     link: "https://www.radixdlt.com/",
   },
   {
-    title: "Moveprice 📦",
-    stack: "Elixir / Phoenix",
-    desc: "Moving made simple! Full stack web application.",
+    title: "Charger Help Android Technician App",
+    stack: "React Native / Android",
+    desc: "Total app refactor, new features, improved performance",
     link: "https://moveprice.com",
   },
 ];
