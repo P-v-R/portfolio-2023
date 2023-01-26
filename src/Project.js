@@ -1,12 +1,9 @@
 import React from "react";
 
-export default function Project({ project, key }) {
+export default function Project({ project }) {
   const { title, stack, desc, link } = project;
   return (
-    <div
-      className="p-4 border-2 m-4 text-black border-black bg-white grid md:grid-cols-3 md:h-36"
-      key={key}
-    >
+    <div className="p-4 border-2 m-4 text-black border-black bg-white grid md:grid-cols-3 md:h-36">
       <div className="col-span-2 ">
         <p className="text-2xl font-bold">{title}</p>
         <p className="text-xl py-2">{stack}</p>

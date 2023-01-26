@@ -1,12 +1,9 @@
 import React from "react";
 
-export default function Fact({ fact, key }) {
+export default function Fact({ fact }) {
   const { title, points } = fact;
   return (
-    <div
-      className="p-4 border-2 m-4 text-black border-black bg-white"
-      key={key}
-    >
+    <div className="p-4 border-2 m-4 text-black border-black bg-white">
       <div className="">
         <p className="text-2xl font-bold pb-2">{title}</p>
       </div>

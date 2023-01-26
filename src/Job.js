@@ -1,12 +1,11 @@
 import React from "react";
 
-export default function Job({ job, key }) {
+export default function Job({ job }) {
   const { title, role, desc, when, link } = job;
   return (
     <a
       href={link}
-      className="hover:cursor-none p-4 border-2 my-2 md:m-4 text-black border-black bg-white card-body hover:bg-gradient-to-tr from-yellow via-yellow to-amber-300"
-      key={key}
+      className="hover:cursor-none p-4 border-2 my-2 md:m-4 text-black border-black bg-white card-body hover:bg-gradient-to-tr from-yellow via-yellow to-amber-300 md:h-52"
     >
       <div className="flex justify-between">
         <p className="text-2xl font-bold">{title}</p>

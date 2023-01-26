@@ -2,21 +2,21 @@ export const experiences = [
   {
     title: "Township",
     role: "L2 Software Engineer",
-    desc: "here is the description of what I did at township, keep it short and simple",
+    desc: "Full stack. Desktop & mobile applications, hardware devices, and web applications. Using Elixir/Phoenix, Typescript and many modern frameworks.",
     when: "2020 - Present",
     link: "https://www.township.agency/",
   },
   {
     title: "Freelance",
     role: "Web Developer",
-    desc: "Shopify, React, open source, custom portfolios, web design",
+    desc: "Shopify, React, open source, custom portfolios, wedding websites, promotional websites, web design, UI/UX, and more.",
     when: "2020 - Present",
     link: "",
   },
   {
     title: "Marin Software",
     role: "Software Engineer Intern",
-    desc: "Angular legacy app, refactoring codebase to angular 3",
+    desc: "Front End. Angular legacy app, refactoring codebase to angular 3",
     when: "2020",
     link: "https://www.marinsoftware.com/",
   },
@@ -25,7 +25,7 @@ export const experiences = [
     role: "Photography, Music, Food",
     desc: "A Few of my favorite things!",
     when: "1995 - present",
-    link: "",
+    link: "https://www.instagram.com/perryvon",
   },
 ];
 
@@ -80,6 +80,6 @@ export const facts = [
   },
   {
     title: "Goals",
-    points: ["Start a family", "Make positive change", "Beat Dark Souls 3"],
+    points: ["Start a family", "Shoot an eagle (golf)", "Beat Dark Souls 3"],
   },
 ];

@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { trailingCursor } from "cursor-effects";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-new trailingCursor({ particles: 7 });
+new trailingCursor({ particles: 6 });
 root.render(
   <React.StrictMode>
     <App />
