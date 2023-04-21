@@ -14,7 +14,7 @@ const P5Sketch = () => {
     // p5.js sketch code here
 
     p.setup = () => {
-      p.createCanvas(windowSize.current[0], 480);
+      p.createCanvas(windowSize.current[0], windowSize.current[1]);
       // Additional setup code
     };
 
