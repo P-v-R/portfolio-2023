@@ -36,9 +36,9 @@ export default function LandingPage() {
           return <Project project={project} key={index} />;
         })}
       </div>
-      <div className="flex justify-center border-2 mx-4 text-black border-black bg-white">
+      {/* <div className="flex justify-center border-2 mx-4 text-black border-black bg-white">
         <GitHubCal username="p-v-r" />
-      </div>
+      </div> */}
       <p className="font-3xl pt-10 font-bold">THINGS YOU SHOULD KNOW</p>
       <div className="grid grid-cols-1 lg:grid-cols-3 text-center">
         {facts.map((fact, index) => {
