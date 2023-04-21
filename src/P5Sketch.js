@@ -64,7 +64,7 @@ const P5Sketch = () => {
     };
 
     new p5(sketch, canvasRef.current);
-  }, []);
+  }, [height, images, width]);
 
   return <div ref={canvasRef} />;
 };
