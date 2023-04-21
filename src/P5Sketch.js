@@ -32,7 +32,7 @@ const P5Sketch = () => {
     ten,
     eleven,
   ];
-  let imgIndex = 0;
+  const imgIndex = useRef(0);
 
   useEffect(() => {
     const sketch = (p) => {
@@ -58,8 +58,8 @@ const P5Sketch = () => {
 
       p.mouseClicked = () => {
         // Load the next image when the user clicks the mouse
-        imgIndex = (imgIndex + 1) % images.length;
-        img = p.loadImage(images[imgIndex]);
+        imgIndex.current = (imgIndex.current + 1) % images.length;
+        img = p.loadImage(images[imgIndex.current]);
       };
     };
 
