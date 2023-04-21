@@ -1,52 +1,72 @@
 import React, { useRef, useEffect } from "react";
+
+import one from "./assets/photos/one.jpg";
+import two from "./assets/photos/two.jpg";
+import three from "./assets/photos/three.jpg";
+import four from "./assets/photos/four.jpg";
+import five from "./assets/photos/five.jpg";
+import six from "./assets/photos/six.jpg";
+import seven from "./assets/photos/seven.jpg";
+import eight from "./assets/photos/eight.jpg";
+import nine from "./assets/photos/nine.jpg";
+import ten from "./assets/photos/ten.jpg";
+import eleven from "./assets/photos/eleven.jpg";
+
 import p5 from "p5";
 
 const P5Sketch = () => {
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
   const canvasRef = useRef();
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const images = [
+    one,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
+    eight,
+    nine,
+    ten,
+    eleven,
+  ];
+  let imgIndex = 0;
 
   useEffect(() => {
-    // Initialize p5.js sketch in the canvas element
+    const sketch = (p) => {
+      let img;
+
+      p.preload = () => {
+        // Load the first image in the preload() function
+        img = p.loadImage(images[0]);
+      };
+
+      p.setup = () => {
+        p.createCanvas(width, height);
+      };
+
+      p.draw = () => {
+        // Check if the image is loaded before calling drawImage()
+        if (img && img.width > 0) {
+          // Resize the image to fit the canvas
+          img.resize(width / 5, 0);
+          p.image(img, p.mouseX, p.mouseY);
+        }
+      };
+
+      p.mouseClicked = () => {
+        // Load the next image when the user clicks the mouse
+        imgIndex = (imgIndex + 1) % images.length;
+        img = p.loadImage(images[imgIndex]);
+      };
+    };
+
     new p5(sketch, canvasRef.current);
   }, []);
 
-  const sketch = (p) => {
-    // p5.js sketch code here
-
-    p.setup = () => {
-      p.createCanvas(windowSize.current[0], windowSize.current[1]);
-      // Additional setup code
-    };
-
-    p.draw = () => {
-      p.background("#FEF1E5");
-
-      const lineSpacing = 30;
-      const lineAmplitude = 10;
-      const lineFrequency = 0.02;
-      const lineWidth = p.width;
-      const lineCount = p.height / lineSpacing + 2;
-
-      for (let i = 0; i < lineCount; i++) {
-        const lineY = i * lineSpacing - p.frameCount * 2;
-        p.strokeWeight(2);
-        p.stroke(0);
-        p.noFill();
-        p.beginShape();
-        for (let x = 0; x < lineWidth; x++) {
-          const lineX = x;
-          const lineOffset =
-            p.sin(lineX * lineFrequency + lineY * lineFrequency * 0.5) *
-            lineAmplitude;
-          const lineVertexY = lineY + lineOffset;
-          p.vertex(lineX, lineVertexY);
-        }
-        p.endShape();
-      }
-    };
-  };
-
-  return <div ref={canvasRef}></div>;
+  return <div ref={canvasRef} />;
 };
 
 export default P5Sketch;

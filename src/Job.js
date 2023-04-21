@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Job({ job }) {
+export default function Job({ job, func }) {
   const { title, role, desc, when, link } = job;
   return (
     <a
+      onClick={() => func()}
       href={link}
       className="hover:cursor-none p-4 border-2 my-2 md:m-4 text-black border-black bg-white card-body hover:bg-gradient-to-tr from-yellow via-yellow to-amber-300 md:h-52"
     >

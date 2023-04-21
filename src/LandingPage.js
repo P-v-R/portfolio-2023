@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Job from "./Job";
 import Project from "./Project";
 import Fact from "./Fact";
@@ -8,8 +8,16 @@ import P5Sketch from "./P5Sketch";
 // import GitHubCal from "./GitHubCal";
 
 export default function LandingPage() {
+  const [isPhotoOn, setIsPhotoOn] = useState(false);
+
+  console.log("=====", isPhotoOn);
   return (
-    <div>
+    <div className="relative">
+      {isPhotoOn && (
+        <div className="absolute">
+          <P5Sketch />
+        </div>
+      )}
       <div className="p-10 md:w-2/3 mx-auto">
         <p className="text-5xl text-center">Perry von Rosenvinge</p>
         <p className="text-3xl pt-4 text-center">
@@ -19,7 +27,9 @@ export default function LandingPage() {
         <p className="font-3xl pt-10 font-bold">EXPERIENCES</p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {experiences.map((job, index) => {
-            return <Job job={job} key={index} />;
+            return (
+              <Job job={job} key={index} func={() => setIsPhotoOn(true)} />
+            );
           })}
         </div>
         <p className="font-3xl pt-10 pb-2 font-bold">SKILLS</p>
@@ -52,7 +62,6 @@ export default function LandingPage() {
           <Contact />
         </div>
       </div>
-      <P5Sketch />
     </div>
   );
 }

@@ -25,7 +25,8 @@ export const experiences = [
     role: "Photography, Music, Food",
     desc: "A Few of my favorite things!",
     when: "1995 - present",
-    link: "https://www.instagram.com/perryvon",
+    // link: "/photos",
+    func: true,
   },
 ];
 
