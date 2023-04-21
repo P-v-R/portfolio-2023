@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 
 import one from "./assets/photos/one.jpg";
 import two from "./assets/photos/two.jpg";
@@ -19,19 +19,11 @@ const P5Sketch = () => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  const images = [
-    one,
-    two,
-    three,
-    four,
-    five,
-    six,
-    seven,
-    eight,
-    nine,
-    ten,
-    eleven,
-  ];
+  const images = useMemo(
+    () => [one, two, three, four, five, six, seven, eight, nine, ten, eleven],
+    []
+  );
+
   const imgIndex = useRef(0);
 
   useEffect(() => {
