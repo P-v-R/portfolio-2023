@@ -4,6 +4,7 @@ import Project from "./Project";
 import Fact from "./Fact";
 import { experiences, skills, projects, facts } from "./things";
 import Contact from "./Contact";
+import P5Sketch from "./P5Sketch";
 // import GitHubCal from "./GitHubCal";
 
 export default function LandingPage() {
@@ -49,6 +50,7 @@ export default function LandingPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 text-center">
         <Contact />
       </div>
+      <P5Sketch />
     </div>
   );
 }
