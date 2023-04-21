@@ -4,7 +4,7 @@ import Project from "./Project";
 import Fact from "./Fact";
 import { experiences, skills, projects, facts } from "./things";
 import Contact from "./Contact";
-import GitHubCal from "./GitHubCal";
+// import GitHubCal from "./GitHubCal";
 
 export default function LandingPage() {
   return (
