@@ -10,11 +10,13 @@ import P5Sketch from "./P5Sketch";
 export default function LandingPage() {
   const [isPhotoOn, setIsPhotoOn] = useState(false);
 
-  console.log("=====", isPhotoOn);
   return (
     <div className="relative">
       {isPhotoOn && (
-        <div className="absolute">
+        <div
+          className="absolute h-[100%]"
+          onDoubleClick={() => setIsPhotoOn(false)}
+        >
           <P5Sketch />
         </div>
       )}
