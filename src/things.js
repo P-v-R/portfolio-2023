@@ -16,7 +16,7 @@ export const experiences = [
   {
     title: 'Marin Software',
     role: 'Software Engineer',
-    desc: 'Front End. Angular legacy app, refactoring codebase to angular 3. Large development org with many teams, working on many projects.',
+    desc: 'Angular legacy app, refactoring codebase to angular 3. Large development org with many teams, working on many projects.',
     when: '2020',
     link: 'https://www.marinsoftware.com/',
   },
@@ -76,7 +76,7 @@ export const projects = [
   {
     title: 'Streamlined VC 🪙',
     stack: 'NextJS / Contentful',
-    desc: 'Responsive web app, Integrated with Contentful.',
+    desc: 'Responsive web app, integrated with Contentful.',
     link: 'https://streamlined.com',
   },
 ];
@@ -92,6 +92,6 @@ export const facts = [
   },
   {
     title: 'Goals',
-    points: ['Start a family', 'Shoot an eagle (golf)', 'Beat Dark Souls 3'],
+    points: ['Play more guitar', 'Shoot an eagle (golf)', 'Beat Dark Souls 3'],
   },
 ];

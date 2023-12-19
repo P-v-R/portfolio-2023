@@ -12,7 +12,7 @@ export default function LandingPage() {
   const random = Math.floor(Math.random() * 6);
 
   return (
-    <div className='relative px-2'>
+    <div className='relative px-2 mb-8'>
       {isPhotoOn && (
         <div
           className='absolute h-[100%]'
