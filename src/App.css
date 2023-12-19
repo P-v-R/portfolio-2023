@@ -7,40 +7,6 @@ body {
   background-color: #fef1e5;
   cursor: none;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .card-body:hover {
   box-shadow: -10px 10px 0px -2px black;
@@ -52,7 +18,24 @@ body {
   box-shadow: -5px 5px 0px -1px black;
   transform: translate(5px, -1px);
   transition: all 0.2s ease-in-out;
+  font-weight: bold;
 }
+
+.special:hover {
+  background-color: #f9e8d6;
+  box-shadow: -5px 5px 0px -1px black;
+  transform: translate(5px, -1px);
+  transition: all 0.2s ease-in-out;
+}
+
+.special-link:hover {
+  font-weight: bold; /* Add this line to transition the text to bold */
+  color: #ffd301; /* Add this line to change the text color to yellow */
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+/* make a class for special when clicked similar to its hover state */
 
 @tailwind base;
 @tailwind components;

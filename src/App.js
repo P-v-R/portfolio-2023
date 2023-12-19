@@ -1,9 +1,9 @@
-import "./App.css";
-import LandingPage from "./LandingPage";
+import './App.css';
+import LandingPage from './LandingPage';
 
 function App() {
   return (
-    <div className="bg-font-mono cursor-none ">
+    <div className='bg-font-mono cursor-none '>
       <LandingPage />
     </div>
   );

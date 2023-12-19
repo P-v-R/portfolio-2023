@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { trailingCursor } from "cursor-effects";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { trailingCursor } from 'cursor-effects';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-new trailingCursor({ particles: 12 });
+const root = ReactDOM.createRoot(document.getElementById('root'));
+new trailingCursor({ particles: 3 });
 root.render(
   <React.StrictMode>
     <App />
