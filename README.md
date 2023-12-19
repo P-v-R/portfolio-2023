@@ -1,70 +1,42 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
+___
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Perry von Rosenvinge
+**Full Stack Software Engineer**
+Los Angeles | (339) 222-6762 | perry.j.vr@gmail.com | [perryvon.dev](https://perryvon.dev) | [GitHub](https://github.com/p-v-r) | [LinkedIn](https://www.linkedin.com/in/perry-von-rosenvinge-65a27a89/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Professional Experience
+### Senior Software Engineer - Township
+*Fall 2021 - Winter 2023*
+- Acted as Tech Lead over multiple projects, communicating with stakeholders and spearheading the planning and execution of sprints.
+- Managed a team of 3 engineers working on multiple projects throughout the agency.
+- Spearheaded a new onboarding program for junior developers with no/little prior industry experience and offered a mentoring program to all new hires.
+- Refactored, debugged, and repaired clients' existing software, solving critical errors and instilling clean code practices.
+- Implemented analytics and performance tracking over multiple projects.
+- Thrived in a constantly evolving and fast-paced agency environment, working with various languages and frameworks including Elixir/Phoenix, Typescript, React Native, and more.
 
-### `npm test`
+### Software Engineer Intern - Marin Software
+*Summer 2021*
+- Maintained and refactored an Angular 2 "legacy" codebase.
+- Worked alongside a team of over 100 other developers, in a larger scale development environment.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Education
+- **Rithm School**  
+  *Feb 2021 – July 2021*  
+  Full Stack Web Development Bootcamp  
+  San Francisco, CA
 
-### `npm run build`
+- **Blueprint X Management Training**  
+  *Aug 2023 – Oct 2021*  
+  People & Project Management  
+  Santa Monica, CA
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Santa Monica College**  
+  *2020*  
+  Mathematics and Software Engineering  
+  Santa Monica, CA
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technical Skills
+- **Languages:** Elixir | Javascript | Python | Typescript | SQL | HTML | CSS
+- **Libraries / Frameworks / Tools:** React | Phoenix | Vue | Next | Angular | Expo | React Testing Library | Node | Express | Jest | Flask | SQLAlchemy | PostgreSQL | GraphQL | VSCode | Git | GitHub
