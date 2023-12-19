@@ -9,6 +9,7 @@ export default function Contact() {
         href={resume}
         download='pvr_resume'
         target='_blank'
+        rel='noreferrer'
         className='special w-fit mx-auto cursor-none text-xl p-2 hover:font-bold active:bg-yellow'
       >
         Download Resume
