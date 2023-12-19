@@ -53,13 +53,13 @@ export const projects = [
     title: 'Charger Help Android Technician App ⚡️',
     stack: 'React Native / Android',
     desc: 'Total app refactor, new features, improved performance.',
-    link: 'https://moveprice.com',
+    link: 'https://www.township.agency/case-studies/chargerhelp',
   },
   {
     title: 'Charger Help IOS Technician App 📱',
     stack: 'React Native / Expo ',
     desc: 'Offline first application built from the ground up.',
-    link: 'https://moveprice.com',
+    link: 'https://www.chargerhelp.com',
   },
   {
     title: 'Radix Wallet 🏦',
