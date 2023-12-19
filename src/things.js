@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: 'Township',
     role: 'Sr. Software Engineer',
-    desc: 'Full stack. Desktop & mobile applications, hardware devices, and web applications. Using Elixir/Phoenix, Typescript and many modern frameworks.',
+    desc: 'Full stack. Desktop & mobile applications, hardware devices, web applications and more. Leading projects, managing teams & coding a lot!',
     when: '2021 - 2023',
     link: 'https://www.township.agency/',
   },
@@ -11,12 +11,12 @@ export const experiences = [
     role: 'Web Developer',
     desc: 'Shopify, React, open source, custom portfolios, wedding websites, promotional websites, web design, UI/UX, and more.',
     when: '2020 - Present',
-    link: '',
+    link: 'https://www.linkedin.com/in/perry-von-rosenvinge-65a27a89/',
   },
   {
     title: 'Marin Software',
     role: 'Software Engineer',
-    desc: 'Front End. Angular legacy app, refactoring codebase to angular 3',
+    desc: 'Front End. Angular legacy app, refactoring codebase to angular 3. Large development org with many teams, working on many projects.',
     when: '2020',
     link: 'https://www.marinsoftware.com/',
   },
@@ -25,7 +25,6 @@ export const experiences = [
     role: 'Photography, Songwriting, Food',
     desc: 'A Few of my favorite things!',
     when: '1995 - present',
-    // link: "/photos",
     func: true,
   },
 ];

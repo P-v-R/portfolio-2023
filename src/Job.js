@@ -13,7 +13,7 @@ export default function Job({ job, func }) {
         <p className=' font-lightGray my-auto'>{when}</p>
       </div>
       <p className='text-xl '>{role}</p>
-      <p className='pt-4'>{desc}</p>
+      <p className='pt-2'>{desc}</p>
     </a>
   );
 }
