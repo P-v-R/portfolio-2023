@@ -20,6 +20,12 @@ export default function Contact() {
       >
         Linkedin
       </a>
+      <a
+        className='cursor-none text-xl py-2 special-link'
+        href='https://www.github.com/p-v-r'
+      >
+        Github
+      </a>
     </div>
   );
 }
