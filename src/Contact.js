@@ -1,5 +1,5 @@
 import React from 'react';
-import resume from '../src/assets/pvr_resume.pdf';
+import resume from '../src/assets/pvr_resume-24.pdf';
 
 export default function Contact() {
   return (
@@ -7,7 +7,7 @@ export default function Contact() {
       <p className=' cursor-none text-xl py-2'>me@perryvon.dev</p>
       <a
         href={resume}
-        download='pvr_resume'
+        download='pvr_resume_24'
         target='_blank'
         rel='noreferrer'
         className='special w-fit mx-auto cursor-none text-xl p-2 hover:font-bold active:bg-yellow'

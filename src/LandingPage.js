@@ -18,6 +18,11 @@ export default function LandingPage() {
           className='absolute h-[100%]'
           onDoubleClick={() => setIsPhotoOn(false)}
         >
+          <div>
+            <h1 className='text-center text-xl p-2 bg-yellow'>
+              Double click to exit
+            </h1>
+          </div>
           <P5Sketch />
         </div>
       )}
