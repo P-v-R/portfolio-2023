@@ -1,5 +1,12 @@
 export const experiences = [
   {
+    title: 'EverTrue',
+    role: 'Software Engineer',
+    desc: 'Full Stack team and project leader, React, GraphQL, Java, Typescript, AWS, and more',
+    when: '2024 - Present',
+    link: 'https://www.evertrue.com/',
+  },
+  {
     title: 'Township',
     role: 'Sr. Software Engineer',
     desc: 'Full stack. Desktop & mobile applications, hardware devices, web applications and more. Leading projects, managing teams & coding a lot!',
@@ -26,6 +33,7 @@ export const experiences = [
     desc: 'A Few of my favorite things!',
     when: '1995 - present',
     func: true,
+    special: true,
   },
 ];
 
