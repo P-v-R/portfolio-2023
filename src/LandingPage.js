@@ -35,6 +35,10 @@ export default function LandingPage() {
         </h2>
         <p className="text-2xl pt-4 text-center">{`${emojis[random]} Los Angeles`}</p>
 
+        <p className="text-center text-base text-gray-500 pt-6 max-w-md mx-auto">
+          Fullstack engineer with agency, SaaS, AI, and e-commerce experience. Team-first, always.
+        </p>
+
         <p className="text-2xl pt-10 font-bold">EXPERIENCES</p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {experiences.map((job, index) => {

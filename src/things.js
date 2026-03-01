@@ -67,7 +67,7 @@ export const projects = [
     title: 'EMPWR iOS App 📱',
     stack: 'React Native / Expo / AWS S3',
     desc: 'Offline-first field app for technicians. Led a 3-engineer team, reduced critical crashes ~40% with S3-backed image caching.',
-    link: 'https://www.township.agency/case-studies/chargerhelp',
+    link: 'https://www.chargerhelp.com/',
   },
   {
     title: 'EverTrue CRM Overhaul 🔄',
@@ -79,7 +79,7 @@ export const projects = [
     title: 'Moveprice 📦',
     stack: 'Elixir / Phoenix / Twilio',
     desc: 'Full-stack moving coordination app with Twilio SMS, real-time PubSub scheduling, and custom admin dashboards.',
-    link: 'https://moveprice.com',
+    link: 'https://www.township.agency/',
   },
   {
     title: 'Radix Wallet 🏦',

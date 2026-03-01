@@ -4,7 +4,7 @@ import resume from '../src/assets/PvR_resume_26.pdf';
 export default function Contact() {
   return (
     <div className='p-4 border-2 m-2 md:m-4 col-span-3 text-black border-black bg-white mt-10 flex flex-col'>
-      <p className=' cursor-none text-xl py-2'>me@perryvon.dev</p>
+      <p className=' cursor-none text-xl py-2'>perry.j.vr@gmail.com</p>
       <a
         href={resume}
         download='PvR_resume_26'
