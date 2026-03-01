@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Job from './Job';
 import Project from './Project';
 import Fact from './Fact';
@@ -6,86 +6,130 @@ import { experiences, skills, projects, facts } from './things';
 import Contact from './Contact';
 import P5Sketch from './P5Sketch';
 
+const palette = [
+  { bg: '#FFD301', text: '#000' }, // Gold Yellow
+  { bg: '#6FA09A', text: '#000' }, // Dusty Jade
+  { bg: '#6B4E71', text: '#fff' }, // Vintage Grape
+  { bg: '#3A4454', text: '#fff' }, // Slate Navy
+  { bg: '#C96A42', text: '#fff' }, // Deep Terracotta
+  { bg: '#7A9E76', text: '#000' }, // Muted Sage
+  { bg: '#C47F7F', text: '#000' }, // Dusty Rose
+  { bg: '#9B7B8A', text: '#fff' }, // Warm Mauve
+];
+
+function SkillTag({ label, color }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <span
+      className='px-3 py-1.5 border-2 border-black text-xs font-bold tracking-widest uppercase cursor-default'
+      style={{
+        backgroundColor: hovered ? color.bg : '#FFD301',
+        color: hovered ? color.text : '#000',
+        transition: hovered
+          ? 'background-color 0.3s ease, color 0.3s ease'
+          : 'background-color 0.8s ease, color 0.8s ease',
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {label}
+    </span>
+  );
+}
+
+function SectionHeader({ label }) {
+  return (
+    <div className='pt-14 pb-1'>
+      <p className='text-xs font-bold tracking-[0.35em] text-black'>{label}</p>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   const [isPhotoOn, setIsPhotoOn] = useState(false);
   const emojis = ['👨‍💻', '🏝', '🏄', '🏖️', '⛳️', '🎸'];
   const random = Math.floor(Math.random() * 6);
+  const shuffledSkills = useRef(
+    [...skills].sort(() => Math.random() - 0.5)
+  ).current;
+
+  const skillColors = useRef(
+    shuffledSkills.map(
+      () => palette[Math.floor(Math.random() * palette.length)]
+    )
+  ).current;
+
+const factColors = useRef(
+    [...palette]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, facts.length)
+      .map((c) => c.bg)
+  ).current;
 
   return (
-    <div className="relative px-2 mb-8">
+    <div className='relative px-2 mb-8'>
       {isPhotoOn && (
         <div
-          className="absolute h-[100%]"
+          className='absolute h-[100%]'
           onDoubleClick={() => setIsPhotoOn(false)}
         >
-          <div>
-            <h1 className="text-center text-xl p-2 bg-yellow">
-              Double click to exit
-            </h1>
+          <div className='fixed top-0 left-0 w-full z-50 bg-black text-yellow text-center py-4 text-lg font-bold tracking-widest uppercase animate-pulse'>
+            ✕ &nbsp; Double click anywhere to exit &nbsp; ✕
           </div>
           <P5Sketch />
         </div>
       )}
-      <div className=" md:p-10 md:w-2/3 mx-auto">
-        <h1 className="text-4xl md:text-6xl text-center mt-8">
-          <span className="font-serif name-highlight">Perry von Rosenvinge</span>
-        </h1>
-        <h2 className="text-xl md:text-2xl pt-5 text-center tracking-widest uppercase text-gray-500 font-light">
-          Software Engineer
-        </h2>
-        <p className="text-base pt-3 text-center text-gray-400">{`${emojis[random]} Los Angeles`}</p>
+      <div className='md:p-10 md:w-4/5 mx-auto'>
+        {/* Hero */}
+        <div className='pt-10 pb-6'>
+          <h1 className='text-5xl md:text-7xl lg:text-8xl text-center leading-tight'>
+            <span className='font-serif name-highlight'>
+              Perry von Rosenvinge
+            </span>
+          </h1>
+          <div className='flex items-center justify-center gap-4 mt-6'>
+            <span className='text-sm tracking-[0.35em] uppercase text-gray-500 font-light'>
+              Software Engineer
+            </span>
+            <span className='text-gray-300'>|</span>
+            <span className='text-sm tracking-[0.25em] text-gray-400'>{`${emojis[random]} Los Angeles`}</span>
+          </div>
+          <p className='text-center text-sm text-gray-600 mt-4 max-w-sm mx-auto leading-relaxed'>
+            Fullstack engineer with agency, SaaS, AI, and e-commerce experience.{' '}
+            <span className="font-bold">Team-first, always.</span>
+          </p>
+        </div>
 
-        <p className="text-center text-base text-gray-700 pt-5 max-w-md mx-auto">
-          Fullstack engineer with agency, SaaS, AI, and e-commerce experience. Team-first, always.
-        </p>
+        <SectionHeader label='EXPERIENCES' />
+        <div className='grid grid-cols-1 lg:grid-cols-2 mt-4'>
+          {experiences.map((job, index) => (
+            <Job job={job} key={index} func={() => setIsPhotoOn(true)} />
+          ))}
+        </div>
 
-        <p className="text-xl pt-12 font-bold tracking-widest flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-yellow"></span>
-          EXPERIENCES
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {experiences.map((job, index) => {
-            return (
-              <Job job={job} key={index} func={() => setIsPhotoOn(true)} />
-            );
-          })}
+        <SectionHeader label='SKILLS' />
+        <div className='flex flex-wrap gap-2 mt-4 pb-2 mx-2 md:mx-4'>
+          {shuffledSkills.map((skill, index) => (
+            <SkillTag key={index} label={skill} color={skillColors[index]} />
+          ))}
         </div>
-        <p className="text-xl pt-12 font-bold tracking-widest flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-yellow"></span>
-          SKILLS
-        </p>
-        <div className="m-2 py-2 md:m-4 grid grid-cols-2 lg:grid-cols-4 text-center bg-white border-2 border-black">
-          {skills.map((skill, index) => {
-            return (
-              <div className="m-2 md:m-4" key={index}>
-                <p>{skill}</p>
-              </div>
-            );
-          })}
+
+        <SectionHeader label='PROJECTS' />
+        <div className='mt-4'>
+          {projects.map((project, index) => (
+            <Project project={project} key={index} />
+          ))}
         </div>
-        <p className="text-xl pt-12 font-bold tracking-widest flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-yellow"></span>
-          PROJECTS
-        </p>
-        <div>
-          {projects.map((project, index) => {
-            return <Project project={project} key={index} />;
-          })}
+
+        <SectionHeader label='THINGS YOU SHOULD KNOW' />
+        <div className='grid grid-cols-1 lg:grid-cols-3 text-center mt-4'>
+          {facts.map((fact, index) => (
+            <Fact fact={fact} key={index} color={factColors[index]} />
+          ))}
         </div>
-        <p className="text-xl pt-12 font-bold tracking-widest flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-yellow"></span>
-          THINGS YOU SHOULD KNOW
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-3 text-center">
-          {facts.map((fact, index) => {
-            return <Fact fact={fact} key={index} />;
-          })}
-        </div>
-        <p className="text-xl pt-12 font-bold tracking-widest flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-yellow"></span>
-          CONTACT & MORE
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-3 text-center">
+
+        <SectionHeader label='CONTACT & MORE' />
+        <div className='grid grid-cols-1 lg:grid-cols-3 text-center mt-4'>
           <Contact />
         </div>
       </div>

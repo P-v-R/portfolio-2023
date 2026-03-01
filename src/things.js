@@ -38,22 +38,38 @@ export const experiences = [
 ];
 
 export const skills = [
+  'JavaScript',
   'TypeScript',
   'React',
   'React Native',
   'Next.js',
+  'Expo',
+  'Node.js',
   'Elixir/Phoenix',
   'Python',
-  'Node.js',
   'GraphQL',
   'AWS',
   'Vue',
+  'Angular',
+  'Electron',
+  'TanStack Query',
   'Tailwind CSS',
+  'SASS',
   'Figma',
+  'Contentful',
+  'Vercel',
+  'Datadog',
   'LaunchDarkly',
+  'Twilio',
+  'Firebase',
   'CI/CD',
   'Shopify',
   'Django',
+  'AI Development Tools',
+  'Mentorship',
+  'Leadership',
+  'Public Speaking',
+  'Sales',
 ];
 
 export const projects = [
@@ -96,7 +112,7 @@ export const facts = [
   },
   {
     title: 'Interests',
-    points: ['Film & Television', 'Food', 'Art'],
+    points: ['Food', 'Art', 'Grateful Dead'],
   },
   {
     title: 'Goals',

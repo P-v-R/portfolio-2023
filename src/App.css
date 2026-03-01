@@ -17,6 +17,7 @@ body {
 .card-body:hover {
   box-shadow: -8px 8px 0px 0px black;
   transform: translate(5px, -5px);
+  background-color: #FFD301;
   transition: all 0.2s ease-in-out;
 }
 
@@ -24,11 +25,15 @@ body {
   background: linear-gradient(transparent 62%, #FFD301 62%);
 }
 
-.button-body:hover {
-  box-shadow: -5px 5px 0px -1px black;
-  transform: translate(5px, -1px);
+.button-body {
+  box-shadow: 5px 5px 0px 0px black;
   transition: all 0.2s ease-in-out;
-  font-weight: bold;
+}
+
+.button-body:hover {
+  box-shadow: -8px 8px 0px 0px black;
+  transform: translate(5px, -5px);
+  transition: all 0.2s ease-in-out;
 }
 
 .special:hover {
@@ -40,9 +45,15 @@ body {
 }
 
 .special-link:hover {
-  font-weight: bold; /* Add this line to transition the text to bold */
-  color: #ffd301; /* Add this line to change the text color to yellow */
+  font-weight: bold;
+  color: #ffd301;
   text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.teal-link:hover {
+  font-weight: bold;
+  color: #6FA09A;
   transition: all 0.2s ease-in-out;
 }
 
