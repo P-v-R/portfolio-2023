@@ -9,10 +9,19 @@ body {
   cursor: none;
 }
 
-.card-body:hover {
-  box-shadow: -10px 10px 0px -2px black;
-  transform: translate(5px, -1px);
+.card-body {
+  box-shadow: 5px 5px 0px 0px black;
   transition: all 0.2s ease-in-out;
+}
+
+.card-body:hover {
+  box-shadow: -8px 8px 0px 0px black;
+  transform: translate(5px, -5px);
+  transition: all 0.2s ease-in-out;
+}
+
+.name-highlight {
+  background: linear-gradient(transparent 62%, #FFD301 62%);
 }
 
 .button-body:hover {

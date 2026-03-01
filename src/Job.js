@@ -21,7 +21,7 @@ export default function Job({ job, func }) {
       <a
         onClick={() => func()}
         href={link}
-        className={`card-bp:hidden hover:cursor-none p-4 border-2 my-2 m-2 card-bp:m-4 text-black border-black bg-white card-bp:h-52 ${
+        className={`card-body card-bp:hidden hover:cursor-none p-4 border-2 my-2 m-2 card-bp:m-4 text-black border-black bg-white card-bp:h-52 ${
           special ? 'col-span-2 hover:animate-pulse' : ''
         }`}
       >
