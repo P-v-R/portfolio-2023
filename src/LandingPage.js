@@ -23,11 +23,13 @@ function SkillTag({ label, color }) {
     <span
       className='px-3 py-1.5 border-2 border-black text-xs font-bold tracking-widest uppercase cursor-default'
       style={{
-        backgroundColor: hovered ? color.bg : '#FFD301',
+        backgroundColor: hovered ? color.bg : '#FFFFFF',
         color: hovered ? color.text : '#000',
+        paddingLeft: hovered ? '1rem' : '0.75rem',
+        paddingRight: hovered ? '1rem' : '0.75rem',
         transition: hovered
-          ? 'background-color 0.3s ease, color 0.3s ease'
-          : 'background-color 0.8s ease, color 0.8s ease',
+          ? 'background-color 0.3s ease, color 0.3s ease, padding 0.2s ease'
+          : 'background-color 0.8s ease, color 0.8s ease, padding 0.4s ease',
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -39,7 +41,7 @@ function SkillTag({ label, color }) {
 
 function SectionHeader({ label }) {
   return (
-    <div className='pt-14 pb-1'>
+    <div className='pt-8 pb-1'>
       <p className='text-xs font-bold tracking-[0.35em] text-black'>{label}</p>
     </div>
   );
@@ -49,17 +51,11 @@ export default function LandingPage() {
   const [isPhotoOn, setIsPhotoOn] = useState(false);
   const emojis = ['👨‍💻', '🏝', '🏄', '🏖️', '⛳️', '🎸'];
   const random = Math.floor(Math.random() * 6);
-  const shuffledSkills = useRef(
-    [...skills].sort(() => Math.random() - 0.5)
-  ).current;
-
   const skillColors = useRef(
-    shuffledSkills.map(
-      () => palette[Math.floor(Math.random() * palette.length)]
-    )
+    skills.map(() => palette[Math.floor(Math.random() * palette.length)])
   ).current;
 
-const factColors = useRef(
+  const factColors = useRef(
     [...palette]
       .sort(() => Math.random() - 0.5)
       .slice(0, facts.length)
@@ -82,21 +78,21 @@ const factColors = useRef(
       <div className='md:p-10 md:w-4/5 mx-auto'>
         {/* Hero */}
         <div className='pt-10 pb-6'>
-          <h1 className='text-5xl md:text-7xl lg:text-8xl text-center leading-tight'>
+          <h1 className='text-4xl md:text-7xl lg:text-8xl text-center leading-tight'>
             <span className='font-serif name-highlight'>
               Perry von Rosenvinge
             </span>
           </h1>
-          <div className='flex items-center justify-center gap-4 mt-6'>
+          <div className='flex flex-col md:flex-row items-center justify-center gap-1 md:gap-4 mt-4'>
             <span className='text-sm tracking-[0.35em] uppercase text-gray-500 font-light'>
               Software Engineer
             </span>
-            <span className='text-gray-300'>|</span>
+            <span className='hidden md:block text-gray-300'>|</span>
             <span className='text-sm tracking-[0.25em] text-gray-400'>{`${emojis[random]} Los Angeles`}</span>
           </div>
           <p className='text-center text-sm text-gray-600 mt-4 max-w-sm mx-auto leading-relaxed'>
             Fullstack engineer with agency, SaaS, AI, and e-commerce experience.{' '}
-            <span className="font-bold">Team-first, always.</span>
+            <span className='font-bold'>Team-first, always.</span>
           </p>
         </div>
 
@@ -109,7 +105,7 @@ const factColors = useRef(
 
         <SectionHeader label='SKILLS' />
         <div className='flex flex-wrap gap-2 mt-4 pb-2 mx-2 md:mx-4'>
-          {shuffledSkills.map((skill, index) => (
+          {skills.map((skill, index) => (
             <SkillTag key={index} label={skill} color={skillColors[index]} />
           ))}
         </div>
