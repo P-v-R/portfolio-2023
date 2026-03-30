@@ -71,6 +71,12 @@ export const skills = [
 
 export const projects = [
   {
+    title: 'Fescue Golf Club ⛳',
+    stack: 'Next.js / Supabase / Sanity / Shopify / Resend',
+    desc: 'Full-stack platform for a private golf simulator club — invite-only member portal, real-time bay reservations, Sanity CMS, Shopify merch store, automated emails via Resend, and a CI/CD pipeline that ships itself to production.',
+    internalPath: '/fescue',
+  },
+  {
     title: 'Signal by EverTrue 📊',
     stack: 'React / CoffeeScript / GraphQL',
     desc: 'Reporting dashboards, AI-driven suggestions, and automated client onboarding for 200+ universities and nonprofits.',
